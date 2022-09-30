@@ -39,9 +39,19 @@ public class ProductoController {
 		//producto.setPort(Integer.parseInt(env.getProperty("local.server.port")));
 		producto.setPort(port);
 		
-		boolean ok = false;
-		if(!ok)
-			throw new RuntimeException("no se pudo cargar el producto");
+//Codigo que lanza una excepción para pruebas de Hystrix y su manejo de errores
+//		boolean ok = false;
+//		if(!ok)
+//			throw new RuntimeException("no se pudo cargar el producto");
+		
+//		try {
+//			System.out.println("Durmiendo...");
+//			Thread.sleep(3000L);
+//		} catch (InterruptedException e) {
+//			// TODO: handle exception
+//			e.printStackTrace();
+//		}
+		
 		return producto;
 	}
 	
